@@ -1,0 +1,22 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Runs every day at 2:00 AM UTC
+  workflow_dispatch: # Allows you to trigger it manually via the Actions tab
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Fork
+        uses: actions/checkout@v4
+
+      - name: Sync Upstream
+        uses: tgymnich/fork-sync-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          head: main
+          owner: SirUli
+          repository: homeassistant-ollama-addon
