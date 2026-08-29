@@ -23,7 +23,7 @@ ports_description:
   11434/tcp: "The Ollama API Port, not used for End-User Access"
 options:
   OLLAMA_MODELS: /share/ollama
-  OLLAMA_KEEP_ALIVE: -1
+  OLLAMA_KEEP_ALIVE: 2m
   OLLAMA_KV_CACHE_TYPE: f16
   OLLAMA_FLASH_ATTENTION: 0
   OLLAMA_MAX_LOADED_MODELS: 1
