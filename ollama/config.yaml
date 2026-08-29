@@ -1,4 +1,4 @@
-name: "Ollama"
+name: "Ollama (seethedata)"
 description: "Get up and running with large language models."
 # renovate: datasource=github-tags depName=ollama/ollama
 version: "0.33.2"
@@ -24,10 +24,12 @@ ports_description:
 options:
   OLLAMA_MODELS: /share/ollama
   OLLAMA_KEEP_ALIVE: -1
-  OLLAMA_KV_CACHE_TYPE: q8_0
+  OLLAMA_KV_CACHE_TYPE: f16
   OLLAMA_FLASH_ATTENTION: 0
   OLLAMA_MAX_LOADED_MODELS: 1
   OLLAMA_NUM_PARALLEL: 1
+  LLAMA_ARG_CACHE_RAM: 0
+  LLAMA_ARG_N_PREDICT: 500
   OLLAMA_ORIGINS: ""
   HOME: /data
   gpus: all
