@@ -33,7 +33,7 @@ options:
   OLLAMA_ORIGINS: ""
   HOME: /data
   gpus: all
-  OLLAMA_DEBUG_LOG_REQUESTS: 1
+  OLLAMA_DEBUG_LOG_REQUESTS: true
 schema:
   OLLAMA_API_KEY: str?
   OLLAMA_CONTEXT_LENGTH: int?
@@ -56,6 +56,9 @@ schema:
   OLLAMA_NO_CLOUD: bool?
   OLLAMA_CONTEXT_LENGTH: int?
   OLLAMA_ORIGINS: str
+  LLAMA_ARG_CACHE_RAM: int
+  LLAMA_ARG_N_PREDICT: int
+  OLLAMA_DEBUG_LOG_REQUESTS: bool
   HTTPS_PROXY: str?
   HOME: str
   gpus: str
