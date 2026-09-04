@@ -33,6 +33,7 @@ options:
   OLLAMA_ORIGINS: ""
   HOME: /data
   gpus: all
+  OLLAMA_DEBUG_LOG_REQUESTS: 1
 schema:
   OLLAMA_API_KEY: str?
   OLLAMA_CONTEXT_LENGTH: int?
